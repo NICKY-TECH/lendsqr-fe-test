@@ -15,12 +15,14 @@ import InputWrapper from './Components/Users/InputWrapper';
 import FilterIcon from './Components/Users/FilterIcon';
 import Input from './Components/Global/Input';
 import Button from './Components/Global/Button';
+import MobileMenu from './Components/Users/MobileMenu';
 
 export {
  Input,
  Button,
   Selection,
   RegistrationForm,
+  MobileMenu,
   InputWrapper,
   FilterIcon,
   MobileFooterBar,

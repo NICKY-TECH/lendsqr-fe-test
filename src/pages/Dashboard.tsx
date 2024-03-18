@@ -1,12 +1,18 @@
 import "../styles/base.css";
-import { MainBody,Header,MobileFooterBar } from "..";
+import { useAppSelector } from "../hooks/typedRedux";
+
+import { MainBody,Header,MobileFooterBar,MobileMenu } from "..";
 
 function Dashboard(){
-    return <article className="dashboard">
+    const mobileMenuReduxValue = useAppSelector((state) => state.mobileMenu.value);
+    console.log("mobile")
+    console.log(mobileMenuReduxValue)
+    return <>
+    <article className="dashboard">
+   {mobileMenuReduxValue? <MobileMenu/>:""}
 <Header/>
 <MainBody/>
 <MobileFooterBar/>
-    </article>
+    </article></>
 }
-
 export default Dashboard

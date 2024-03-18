@@ -140,7 +140,6 @@
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
-
   .active-status {
     background-color: lighten($light-green, 45);
     font-weight: 400;
@@ -518,6 +517,7 @@ article {
 }
 
 .ham {
+  width: 50px;
   &:hover {
     cursor: pointer;
   }
