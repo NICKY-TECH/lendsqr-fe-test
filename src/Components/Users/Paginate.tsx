@@ -1,35 +1,78 @@
 import "../../styles/base.css";
-// import { useState } from "react";
+import prev from "../../resources/images/icons/prev-btn.png";
+import next from "../../resources/images/icons/next-btn.png";
+import { useState,useEffect } from "react";
 
+type func = (page: number) => void;
 
-type func = (page:number) => void
+function Paginate(props: {
+  usersPerPage: number;
+  totalUsers: number;
+  currentPage: number;
+  updatePage: func;
+}) {
+  const pages = [];
+  const [minLimit, setMinLimit] = useState(0);
+  const [maxLimit, setMaxLimit] = useState(5);
+  const limit = 5;
+  for (let i = 1; i <= Math.ceil(props.totalUsers / props.usersPerPage); i++) {
+    pages.push(i);
+  }
 
-function Paginate(props:{usersPerPage:number,totalUsers:number,updatePage:func}) {
-    const pages = [];
-    // const [min,setMin] =useState(0);
-    // const [max,setMax] =useState(5);
-    // const limit =5 
-    for(let i=1;i<=Math.ceil(props.totalUsers/props.usersPerPage);i++){
-pages.push(i)
+function nextBtn() {
+    const nextPage = props.currentPage!=pages.length-1?props.currentPage + 1 : props.currentPage;
+    props.updatePage(nextPage);
+    if (props.currentPage!=pages.length-1 && props.currentPage + 1 > maxLimit) {
+      setMaxLimit(maxLimit + limit);
+      setMinLimit(minLimit+limit);
     }
+  }
 
-  return <div className="pagination-container">
-  <p>next</p>
-<ul className="paginate">
-{
-    pages.map((i,index)=>{
-        return <li key={index}>
-            {i}
+  function prevBtn (){
+    const nextPage = props.currentPage===1?1:props.currentPage - 1;
+    props.updatePage(nextPage);
+    if (props.currentPage!=1 && (props.currentPage - 1 )%limit===0) {
+      setMaxLimit(maxLimit - limit);
+      setMinLimit(minLimit-limit);
+    }
+  }
+  function currentPage(e: React.MouseEvent<HTMLLIElement, MouseEvent>) {
+    props.updatePage(Number(e.currentTarget.id));
+  }
 
-        </li>
-    })
+  return (
+    <div className="pagination-container">
+      <div className="prev-btn-container">
+        <img src={prev}  onClick={prevBtn}/>
+      </div>
+      <ul className="paginate">
+        {pages.map((i, index) => {
+          if (i < maxLimit + 1 && i > minLimit) {
+            return (
+              <li
+                key={index}
+                id={i.toString()}
+                onClick={(e) => {
+                  currentPage(e);
+                }}
+                className={
+                  props.currentPage === i ? "active-number" : "not-active"
+                }
+              >
+                {i}
+              </li>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </ul>
+
+      <div className="next-btn-container">
+        <img src={next} onClick={nextBtn} />
+      </div>
+    </div>
+  );
 }
-</ul>
-
-  <p>prev</p>
-    
-  </div>;
-}
-
 
 export default Paginate;

@@ -150,6 +150,65 @@
   width: 100vw;
   overflow-x: hidden;
 }
+.dashboard .active-status {
+  background-color: #f0fbf3;
+  font-weight: 400;
+  color: #39CD62;
+  font-family: "Work Sans", sans-serif;
+  border-radius: 1.8rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+.dashboard .pending-status {
+  background-color: #fff6da;
+  font-weight: 400;
+  color: #E9B200;
+  font-family: #E9B200;
+  font-family: "Work Sans", sans-serif;
+  border-radius: 1.8rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+.dashboard .black-list-status {
+  background-color: #fed8e2;
+  font-weight: 400;
+  color: #E4033B;
+  font-family: "Work Sans", sans-serif;
+  border-radius: 1.8rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+.dashboard .inactive-status {
+  background-color: #f9f9fb;
+  font-weight: 400;
+  color: #545F7D;
+  font-family: "Work Sans", sans-serif;
+  border-radius: 1.8rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+.dashboard .active-number {
+  font-weight: 500;
+  color: #213F7D;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+}
+.dashboard .not-active {
+  font-weight: 500;
+  color: #545F7D;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+}
+.dashboard .prev-btn-container,
+.dashboard .next-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .dashboard .mobile-tooltip {
   font-family: "Sen", sans-serif;
   font-size: 500;
@@ -188,6 +247,7 @@
 }
 .dashboard .main-body footer .pagination-container {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 .dashboard .main-body footer .pagination-container:hover {
@@ -240,7 +300,8 @@
   font-weight: 500;
   margin-bottom: 5px;
 }
-.dashboard .main-body .view .view-options .view-item p:hover, .dashboard .main-body .view .view-options .view-item img:hover {
+.dashboard .main-body .view .view-options .view-item p:hover,
+.dashboard .main-body .view .view-options .view-item img:hover {
   cursor: pointer;
 }
 .dashboard .main-body .view .view-options img {
@@ -461,6 +522,41 @@ article .cards-container .card div {
 }
 
 @media (max-width: 1024px) {
+  .view {
+    position: relative;
+    z-index: 1;
+  }
+  .view .view-options {
+    background-color: white;
+    z-index: 2;
+    width: auto;
+    position: absolute;
+    left: 800px;
+    top: 1px;
+    width: auto;
+    height: auto;
+    padding: 20px 15px 20px 10px;
+    border-radius: 0.37rem;
+    gap: 10px;
+  }
+  .view .view-options .view-item {
+    display: flex;
+    font-family: "Work Sans", sans-serif;
+    color: #213F7D;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .view .view-options .view-item p:hover, .view .view-options .view-item img:hover {
+    cursor: pointer;
+  }
+  .view .view-options img {
+    width: 20px;
+  }
+  .view .view-options a {
+    color: #213F7D;
+    text-decoration: none;
+  }
   footer {
     margin-bottom: 150px;
   }
@@ -543,6 +639,41 @@ article .cards-container .card div {
   }
 }
 @media (min-width: 1025px) {
+  .view {
+    position: relative;
+    z-index: 1;
+  }
+  .view .view-options {
+    background-color: white;
+    z-index: 2;
+    width: auto;
+    position: absolute;
+    left: 1002px;
+    top: 1px;
+    width: auto;
+    height: auto;
+    padding: 20px 15px 20px 10px;
+    border-radius: 0.37rem;
+    gap: 10px;
+  }
+  .view .view-options .view-item {
+    display: flex;
+    font-family: "Work Sans", sans-serif;
+    color: #213F7D;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .view .view-options .view-item p:hover, .view .view-options .view-item img:hover {
+    cursor: pointer;
+  }
+  .view .view-options img {
+    width: 20px;
+  }
+  .view .view-options a {
+    color: #213F7D;
+    text-decoration: none;
+  }
   .dashboard {
     grid-template-rows: 1fr, 11fr;
   }

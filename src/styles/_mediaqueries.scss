@@ -6,6 +6,44 @@ $extraLarge: 1280px;
 $extraextraLarge: 1536px;
 
 @media (max-width: $large) {
+  .view{
+    position: relative;
+    z-index: 1;
+    .view-options {
+      background-color: white;
+      z-index: 2;
+      width: auto;
+      position: absolute;
+      left: 800px;
+      top:1px;
+      width: auto;
+      height: auto;
+      padding: 20px 15px 20px 10px;
+      border-radius: 0.37rem;
+      .view-item{
+        display: flex;
+        font-family: $work;
+        color: $dark-blue;
+        gap: 10px;
+        font-weight: 500;
+        margin-bottom: 5px;
+  p,img{
+    &:hover{
+      cursor: pointer;
+            }
+  }
+      }
+        img{
+          width:20px;
+        }
+        gap:10px;
+        a{
+             color: $dark-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
   footer {
     margin-bottom: 150px;
   }
@@ -94,6 +132,43 @@ $extraextraLarge: 1536px;
 }
 
 @media (min-width: 1025px) {
+  .view{
+    position: relative;
+    z-index: 1;
+    .view-options {
+      background-color: white;
+      z-index: 2;
+      width: auto;
+      position: absolute;
+      left: 1002px;
+      top:1px;
+      width: auto;
+      height: auto;
+      padding: 20px 15px 20px 10px;
+      border-radius: 0.37rem;
+      .view-item{
+        display: flex;
+        font-family: $work;
+        color: $dark-blue;
+        gap: 10px;
+        font-weight: 500;
+        margin-bottom: 5px;
+  p,img{
+    &:hover{
+      cursor: pointer;
+            }
+  }
+      }
+        img{
+          width:20px;
+        }
+        gap:10px;
+        a{
+             color: $dark-blue;
+          text-decoration: none;
+        }
+      }
+    }
   .dashboard {
     grid-template-rows: 1fr, 11fr;
   }
