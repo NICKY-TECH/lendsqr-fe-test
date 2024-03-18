@@ -280,10 +280,10 @@ if(localStorage.getItem("users")===undefined||localStorage.getItem("users")==nul
           <div className="first-half-footer">
             <p>Showing</p>
             <div className="data-shown">
-              <p>100</p>
+              <p>{pageNumber*usersPerPage}</p>
               <img src={dropDown} />
             </div>
-            <p>out of 100</p>
+            <p>out of {users.length}</p>
           </div>
           <Paginate
             {...{

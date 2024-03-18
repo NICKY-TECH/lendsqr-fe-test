@@ -6,6 +6,13 @@ $extraLarge: 1280px;
 $extraextraLarge: 1536px;
 
 @media (max-width: $large) {
+  footer{
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    gap:10px;
+   align-items: center;
+  }
   .view{
     position: relative;
     z-index: 1;
@@ -132,6 +139,9 @@ $extraextraLarge: 1536px;
 }
 
 @media (min-width: 1025px) {
+  footer{
+    display: flex;
+  }
   .view{
     position: relative;
     z-index: 1;

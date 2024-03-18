@@ -20,9 +20,11 @@ function Paginate(props: {
   }
 
 function nextBtn() {
-    const nextPage = props.currentPage!=pages.length-1?props.currentPage + 1 : props.currentPage;
+    const nextPage = props.currentPage<=pages.length-1?props.currentPage + 1 : props.currentPage;
     props.updatePage(nextPage);
-    if (props.currentPage!=pages.length-1 && props.currentPage + 1 > maxLimit) {
+    if (props.currentPage<=pages.length-1 && props.currentPage + 1 > maxLimit) {
+        console.log("length")
+        console.log(currentPage)
       setMaxLimit(maxLimit + limit);
       setMinLimit(minLimit+limit);
     }

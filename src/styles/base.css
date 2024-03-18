@@ -238,7 +238,6 @@
   display: flex;
 }
 .dashboard .main-body footer {
-  display: flex;
   z-index: 4;
 }
 .dashboard .main-body footer .paginate {
@@ -522,6 +521,13 @@ article .cards-container .card div {
 }
 
 @media (max-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    gap: 10px;
+    align-items: center;
+  }
   .view {
     position: relative;
     z-index: 1;
@@ -639,6 +645,9 @@ article .cards-container .card div {
   }
 }
 @media (min-width: 1025px) {
+  footer {
+    display: flex;
+  }
   .view {
     position: relative;
     z-index: 1;
