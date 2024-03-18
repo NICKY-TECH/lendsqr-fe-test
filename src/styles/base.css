@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+* button:hover {
+  cursor: pointer;
+}
+
+.login-container {
+  font-family: "Sen", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-height: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  height: 100%;
+  width: 100vw;
+  flex-grow: 1;
+}
+.login-container header img {
+  margin: 70px 0 40px 30px;
+}
+.login-container .login-section-two {
+  display: flex;
+  flex-grow: 1;
+}
+.login-container .login-section-two .login-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container .login-section-two .login-image img {
+  max-width: 100%;
+}
+.login-container .login-section-two h2 {
+  font-family: "Sen", sans-serif;
+  font-weight: 400;
+  line-height: 27px;
+  color: #545F7D;
+  font-size: 20px;
+}
+.login-container .login-section-two .login-form {
+  display: flex;
+  align-items: center;
+}
+.login-container .login-section-two .login-form .reg-button {
+  padding: 20px 4px 20px 4px;
+  background-color: #39CDCC;
+  color: white;
+  border-radius: 0.25rem;
+}
+.login-container .login-section-two .login-form form {
+  display: flex;
+  width: auto;
+  gap: 45px;
+  flex-direction: column;
+  height: 85%;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  padding-top: 40px;
+}
+.login-container .login-section-two .login-form form a {
+  color: #39CDCC;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: -10px;
+}
+.login-container .login-section-two .login-form form a:hover {
+  cursor: pointer;
+}
+.login-container .login-section-two .login-form form div {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #d9d9d9;
+  border-radius: 0.25rem;
+}
+.login-container .login-section-two .login-form form div input {
+  margin-left: 10px;
+  padding: 15px 6px 15px 6px;
+  width: 85%;
+  color: #545F7D;
+}
+.login-container .login-section-two .login-form form div input:hover {
+  border: none;
+  outline: none;
+}
+.login-container .login-section-two .login-form form div input:focus {
+  border: none;
+  outline: none;
+}
+.login-container .login-section-two .login-form input::-moz-placeholder {
+  font-weight: "Sen", sans-serif;
+  line-height: 19px;
+  font-size: 14;
+  font-weight: 400;
+  color: silver;
+}
+.login-container .login-section-two .login-form input::placeholder {
+  font-weight: "Sen", sans-serif;
+  line-height: 19px;
+  font-size: 14;
+  font-weight: 400;
+  color: silver;
+}
+.login-container .login-section-two .login-form .show {
+  padding-right: 10px;
+  color: #39CDCC;
+  font-weight: bold;
+}
+.login-container .login-section-two .login-form .show:hover {
+  cursor: pointer;
+}
+.login-container .login-section-two .login-form .login-inner-content {
+  width: 100%;
+}
+.login-container .login-section-two .login-form h1 {
+  color: #213F7D;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "Sen", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  max-height: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.dashboard {
+  grid-template-columns: 1fr;
+  overflow-y: auto;
+  grid-template-rows: 1fr, 11fr;
+  display: grid;
+  min-height: 100vh;
+  font-family: "Work Sans", sans-serif;
+  max-height: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #fafafa;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.dashboard .mobile-tooltip {
+  font-family: "Sen", sans-serif;
+  font-size: 500;
+}
+.dashboard .mobile-tooltip .tippy-box {
+  background-color: white;
+}
+.dashboard .mobile-tooltip li a {
+  text-decoration: none;
+  color: black;
+}
+.dashboard header {
+  grid-row: 1/1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  border-bottom: 3px solid whitesmoke;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 20px 0 20px 0;
+}
+.dashboard .main-body {
+  grid-row: 2/12;
+  display: flex;
+}
+.dashboard .main-body footer {
+  display: flex;
+  z-index: 4;
+}
+.dashboard .main-body footer .paginate {
+  display: flex;
+  gap: 15px;
+}
+.dashboard .main-body footer .pagination-container {
+  display: flex;
+  gap: 15px;
+}
+.dashboard .main-body footer .pagination-container:hover {
+  cursor: pointer;
+}
+.dashboard .main-body footer .first-half-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard .main-body footer .first-half-footer .data-shown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dadee6;
+  padding: 10px 20px 10px 20px;
+  width: auto;
+  border-radius: 0.3rem;
+}
+.dashboard .main-body footer .first-half-footer .data-shown p {
+  font-weight: bold;
+  margin-right: auto;
+}
+.dashboard .main-body .table-container {
+  overflow: auto;
+  position: relative;
+}
+.dashboard .main-body .view {
+  position: relative;
+  z-index: 1;
+}
+.dashboard .main-body .view .view-options {
+  background-color: white;
+  z-index: 2;
+  width: auto;
+  position: absolute;
+  left: 1002px;
+  top: 20px;
+  width: auto;
+  height: auto;
+  padding: 20px 15px 20px 10px;
+  border-radius: 0.37rem;
+  gap: 10px;
+}
+.dashboard .main-body .view .view-options .view-item {
+  display: flex;
+  font-family: "Work Sans", sans-serif;
+  color: #213F7D;
+  gap: 10px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.dashboard .main-body .view .view-options .view-item p:hover, .dashboard .main-body .view .view-options .view-item img:hover {
+  cursor: pointer;
+}
+.dashboard .main-body .view .view-options img {
+  width: 20px;
+}
+.dashboard .main-body .view .view-options a {
+  color: #213F7D;
+  text-decoration: none;
+}
+.dashboard .filter-board {
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  height: 92%;
+  width: 30%;
+  z-index: 2;
+  border: 3px solid whitesmoke;
+}
+.dashboard .filter-board .input-wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard .filter-board .input-wrapper p {
+  color: #213F7D;
+  font-weight: 500;
+}
+.dashboard .filter-board form {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+.dashboard .filter-board form .filter {
+  background-color: #39CDCC;
+  padding: 10px 30px 10px 30px;
+  font-weight: 600;
+  border-radius: 0.35rem;
+  color: white;
+}
+.dashboard .filter-board form .reset-form-buttons {
+  font-weight: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  width: 90%;
+  font-size: 14px;
+}
+.dashboard .filter-board form .reset {
+  color: #213F7D;
+  background-color: white;
+  font-weight: 600;
+  border-radius: 0.35rem;
+  border: 1px solid #213F7D;
+  padding: 10px 30px 10px 30px;
+}
+.dashboard .filter-board form input[type=date]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(/src/resources/images/icons/Calendar.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  padding-right: 12px;
+  border-width: thin;
+}
+.dashboard .filter-board form .reset-form {
+  width: 98%;
+  border-radius: 0.35rem;
+  border: 3px solid whitesmoke;
+}
+.dashboard .filter-board form .reset-form input {
+  padding: 15px 0 15px 10px;
+  color: #a6a6a6;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  width: 100%;
+}
+.dashboard .filter-board form .reset-form input:hover, .dashboard .filter-board form .reset-form input:focus {
+  outline: 0;
+}
+.dashboard .filter-board .select-type-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard .filter-board .select-type-container:first-child {
+  margin-top: 20px;
+}
+.dashboard .filter-board .select-type-container select {
+  width: 100%;
+  color: #a6a6a6;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 0.35rem;
+  padding: 15px 0 15px 10px;
+  border: 3px solid whitesmoke;
+}
+.dashboard .filter-board .select-type-container p {
+  color: #213F7D;
+  font-weight: 500;
+}
+.dashboard table {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  width: 100%;
+  text-wrap: nowrap;
+  background-color: white;
+  font-family: "Work Sans", sans-serif;
+  padding: 25px 10px;
+}
+.dashboard table th {
+  padding: 10px 0 0 0;
+  color: #545F7D;
+  font-size: 600;
+}
+.dashboard table thead {
+  overflow-x: auto;
+}
+.dashboard table thead th img:hover {
+  cursor: pointer;
+}
+.dashboard table tbody {
+  overflow-x: auto;
+}
+.dashboard table td {
+  padding: 30px 0 30px 42px;
+  border-bottom: 2px solid #e6e6e6;
+}
+.dashboard table td .view-icon:hover {
+  cursor: pointer;
+}
+.dashboard .sidebar-title {
+  margin: 0 0 10px 15px;
+  color: #545F7D;
+  font-weight: 500;
+}
+.dashboard h1 {
+  color: #213F7D;
+  display: flex;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.15px;
+  padding: 35px 0 35px 35px;
+}
+.dashboard .side-bar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  margin-left: 15px;
+}
+.dashboard .side-bar-list li a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: rgba(33, 63, 125, 0.6);
+  gap: 10px;
+}
+.dashboard .side-bar-list li a:hover {
+  cursor: pointer;
+}
+.dashboard .side-bar-list li {
+  list-style-type: none;
+  gap: 10px;
+}
+
+article {
+  flex-grow: 4;
+}
+article h1 {
+  margin-top: 100px;
+}
+article .cards-container .card {
+  display: flex;
+  height: 160px;
+  padding-left: 10px;
+  margin: auto 0 auto 0;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-family: "Work Sans", sans-serif;
+  color: #213F7D;
+}
+article .cards-container .card:hover {
+  cursor: pointer;
+}
+article .cards-container .card .title {
+  font-size: 14px;
+}
+article .cards-container .card .add-margin {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+}
+article .cards-container .card div {
+  margin-top: 20px;
+}
+
+.ham:hover {
+  cursor: pointer;
+}
+
+.adedeji {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  gap: 10px;
+}
+.adedeji .search-icon:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    margin-bottom: 150px;
+  }
+  .dashboard {
+    grid-template-rows: 1fr, 10fr 1fr;
+  }
+  .login-section-two {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-form {
+    width: 85%;
+  }
+  .login-image {
+    margin-bottom: 30px;
+  }
+  .header-section-two {
+    display: none;
+    background-color: pink;
+  }
+  .search {
+    display: none;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+  .ham {
+    display: flex;
+    width: 50px;
+  }
+  .logo-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+  }
+  aside {
+    display: none;
+  }
+  .cards-container {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .cards-container .card {
+    width: 80%;
+    margin: 0 auto 0 auto;
+  }
+  .table-container {
+    margin: 20px auto 60px auto;
+    max-width: 80%;
+    background-color: palegoldenrod;
+  }
+  .table-container table {
+    width: 100%;
+  }
+  .mobile-side-bar {
+    grid-row: 12/12;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    padding: 25px 10px 25px 10px;
+    bottom: 0;
+    z-index: 3;
+    background-color: white;
+    width: 100%;
+  }
+  .mobile-side-bar a {
+    text-decoration: none;
+    color: #545F7D;
+    font-weight: 700;
+  }
+  .mobile-side-bar .bag,
+  .mobile-side-bar .home {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (min-width: 1025px) {
+  .dashboard {
+    grid-template-rows: 1fr, 11fr;
+  }
+  .mobile-side-bar {
+    display: none;
+  }
+  .table-container {
+    max-width: 94%;
+    margin: 20px 30px 30px 35px;
+  }
+  footer {
+    margin: 0 30px 300px 35px;
+    max-width: 94%;
+    justify-content: space-between;
+    font-family: "Work Sans", sans-serif;
+  }
+  footer div p {
+    color: #545F7D;
+    font-weight: 400;
+  }
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .cards-container .card {
+    width: 230px;
+  }
+  aside {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    flex-grow: 1;
+    z-index: 1;
+  }
+  aside .first-child {
+    margin-top: 60px;
+    padding-top: 30px;
+  }
+  aside .first-child ul li {
+    gap: 980px;
+  }
+  .ham {
+    display: none;
+  }
+  .logo-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 0.7px solid #d9d9d9;
+    width: 70%;
+  }
+  .search input {
+    width: 90%;
+    padding: 12px 6px 12px 6px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .search input::-moz-placeholder {
+    font-weight: "Sen", sans-serif;
+    line-height: 19px;
+    font-size: 14;
+    font-weight: 400;
+    padding-left: 6px;
+    color: silver;
+  }
+  .search input::placeholder {
+    font-weight: "Sen", sans-serif;
+    line-height: 19px;
+    font-size: 14;
+    font-weight: 400;
+    padding-left: 6px;
+    color: silver;
+  }
+  .search-bottom {
+    width: 10%;
+    background-color: #39CDCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 6px 14px 6px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  .search-bottom:hover {
+    cursor: pointer;
+  }
+  .login-section-two {
+    justify-content: space-around;
+  }
+  .login-form {
+    width: 35%;
+  }
+  .header-section-two {
+    display: flex;
+    width: -moz-max-content;
+    width: max-content;
+    align-items: center;
+    color: #213F7D;
+    gap: 30px;
+    padding-right: 45px;
+    font-weight: bold;
+  }
+  .header-section-two a {
+    font-family: "Roboto", sans-serif;
+    color: #213F7D;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=base.css.map */
