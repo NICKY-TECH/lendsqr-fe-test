@@ -13,11 +13,12 @@ $extraextraLarge: 1536px;
     position: fixed;
     display: flex;
     flex-direction: column;
+    padding-left:35px;
     max-height: 100%;
     min-height: 100vh;
     height: 100%;
     right: 0;
-    width:40%;
+    width:auto;
   }
   .mobile-menu-content{
     display: flex;

@@ -15,8 +15,7 @@ function App() {
         <Route index element={<Login/>}/>
         <Route path="dashboard" element={<Main/>}>
           <Route index element={<Dashboard/>}/>
-          <Route path="users/details" element={<Details/>}/>
-
+          <Route path="users/details/:id" element={<Details/>}/>
         </Route>
       </Route>
     )
@@ -24,5 +23,4 @@ function App() {
     return <RouterProvider router={router} />
   
 }
-
 export default App

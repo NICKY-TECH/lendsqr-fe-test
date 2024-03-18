@@ -283,7 +283,7 @@
   z-index: 2;
   width: auto;
   position: absolute;
-  left: 1002px;
+  right: 800;
   top: 1px;
   width: auto;
   height: auto;
@@ -531,11 +531,12 @@ article .cards-container .card div {
     position: fixed;
     display: flex;
     flex-direction: column;
+    padding-left: 35px;
     max-height: 100%;
     min-height: 100vh;
     height: 100%;
     right: 0;
-    width: 40%;
+    width: auto;
   }
   .mobile-menu-content {
     display: flex;
