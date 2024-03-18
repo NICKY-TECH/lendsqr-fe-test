@@ -1,0 +1,208 @@
+$very-sm: 0;
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
+$extraLarge: 1280px;
+$extraextraLarge: 1536px;
+
+@media (max-width: $large) {
+  footer {
+    margin-bottom: 150px;
+  }
+  .dashboard {
+    grid-template-rows: 1fr, 10fr 1fr;
+  }
+  .login-section-two {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-form {
+    width: 85%;
+  }
+
+  .login-image {
+    margin-bottom: 30px;
+  }
+
+  .header-section-two {
+    display: none;
+    background-color: pink;
+  }
+  .search {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+
+  .ham {
+    display: flex;
+    width: 50px;
+  }
+  .logo-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+  }
+  aside {
+    display: none;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    .card {
+      width: 80%;
+      margin: 0 auto 0 auto;
+    }
+  }
+  .table-container {
+    margin: 20px auto 60px auto;
+    max-width: 80%;
+    background-color: palegoldenrod;
+    table {
+      width: 100%;
+    }
+  }
+  .mobile-side-bar {
+    grid-row: 12/12;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    padding: 25px 10px 25px 10px;
+    bottom: 0;
+    z-index: 3;
+    background-color: white;
+    width: 100%;
+    a {
+      text-decoration: none;
+      color: $main-gray;
+      font-weight: 700;
+    }
+    .bag,
+    .home {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .dashboard {
+    grid-template-rows: 1fr, 11fr;
+  }
+  .mobile-side-bar {
+    display: none;
+  }
+
+  .table-container {
+    max-width: 94%;
+    margin: 20px 30px 30px 35px;
+  }
+  footer {
+    margin: 0 30px 300px 35px;
+    max-width: 94%;
+    justify-content: space-between;
+    font-family: $work;
+    div p {
+      color: $main-gray;
+      font-weight: 400;
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .card {
+      width: 230px;
+    }
+  }
+  aside {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    flex-grow: 1;
+    z-index: 1;
+    .first-child {
+      margin-top: 60px;
+      padding-top: 30px;
+    }
+    .first-child ul li {
+    gap:980px
+    }
+  }
+  .ham {
+    display: none;
+  }
+  .logo-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 0.7px solid lighten($gray, 35);
+
+    width: 70%;
+    input {
+      width: 90%;
+      padding: 12px 6px 12px 6px;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      &::placeholder {
+        font-weight: $sen;
+        line-height: 19px;
+        font-size: 14;
+        font-weight: 400;
+        padding-left: 6px;
+        color: lighten($gray, 25);
+      }
+    }
+  }
+  .search-bottom {
+    width: 10%;
+    background-color: $design-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 6px 14px 6px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .login-section-two {
+    justify-content: space-around;
+  }
+  .login-form {
+    width: 35%;
+  }
+  .header-section-two {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    color: $dark-blue;
+    gap: 30px;
+    padding-right: 45px;
+    font-weight: bold;
+    a {
+      font-family: $roboto;
+      color: $dark-blue;
+      font-weight: 400;
+    }
+  }
+}
