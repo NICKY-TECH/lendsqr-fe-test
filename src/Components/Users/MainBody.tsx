@@ -23,6 +23,7 @@ import activate from "../../resources/images/icons/np_delete-friend_3248001_0000
 import { useState, useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "../../hooks/typedRedux";
 import { viewState } from "../../features/viewOverlay";
+import { filter } from "../../resources/filter";
 
 const MainBody: React.FC = () => {
   const filterBoard = useAppSelector((state) => state.filter.value);
@@ -47,7 +48,7 @@ const MainBody: React.FC = () => {
   const firstUserIndex = lastUserIndex - usersPerPage;
   const currentUsersArr = users.slice(firstUserIndex, lastUserIndex);
   useEffect(() => {
-    fetch("https://run.mocky.io/v3/7e2ad6f0-16b8-4043-8901-1d06f7414932").then(
+    fetch("https://run.mocky.io/v3/a3fc7f2d-19e4-4f74-8df7-1f6e017646e5").then(
       (userArray) => {
         return userArray.json().then((readable) => {
           const userModifiedArr:
@@ -120,8 +121,7 @@ if(localStorage.getItem("users")===undefined||localStorage.getItem("users")==nul
   }
 
   return (
-    <section className="main-body">
-      <SideBar />
+    <section className="body">
       <article>
         <h1>Users</h1>
         <section className="cards-container">
@@ -266,7 +266,7 @@ if(localStorage.getItem("users")===undefined||localStorage.getItem("users")==nul
                   <Selection {...{ data: relationshipStatus }} />
 
                   <div className="reset-form-buttons">
-                    <Button {...{ class: "reset", text: "Reset" }} />
+                    <Button {...{ class: "reset", text: "Reset" }} updateData={setUsers} data={users}/>
                     <Button {...{ class: "filter", text: "Filter" }} />
                   </div>
                 </form>

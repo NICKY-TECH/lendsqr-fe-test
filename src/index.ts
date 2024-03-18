@@ -16,12 +16,16 @@ import FilterIcon from './Components/Users/FilterIcon';
 import Input from './Components/Global/Input';
 import Button from './Components/Global/Button';
 import MobileMenu from './Components/Users/MobileMenu';
+import Main from './pages/Main';
+import Details from './pages/Details';
 
 export {
  Input,
  Button,
   Selection,
   RegistrationForm,
+  Details,
+  Main,
   MobileMenu,
   InputWrapper,
   FilterIcon,

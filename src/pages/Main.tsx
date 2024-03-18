@@ -1,17 +1,22 @@
 import "../styles/base.css";
 import { useAppSelector } from "../hooks/typedRedux";
 
-import { MainBody,Header,MobileFooterBar,MobileMenu } from "..";
+import { SideBar,Header,MobileFooterBar,MobileMenu } from "..";
+import { Outlet } from "react-router-dom";
 
-function Dashboard(){
+function Main(){
     const mobileMenuReduxValue = useAppSelector((state) => state.mobileMenu.value);
     console.log("mobile")
     console.log(mobileMenuReduxValue)
     return <>
-    <article>
+    <article className="dashboard">
    {mobileMenuReduxValue? <MobileMenu/>:""}
-<MainBody/>
+<Header/>
+<section className="main-body">
+<SideBar />
+<Outlet/>
+</section>
 <MobileFooterBar/>
     </article></>
 }
-export default Dashboard
+export default Main
