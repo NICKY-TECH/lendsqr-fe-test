@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 type initialStateType = {
   value:boolean;
 };
@@ -12,11 +12,11 @@ export const viewSlice = createSlice({
   initialState: initialValue,
   reducers: {
     viewState: (
-      state
+      state,action:PayloadAction<boolean>
     ) => {
       return {
         ...state,
-        value:!state.value,
+        value:action.payload,
       };
     },
   },

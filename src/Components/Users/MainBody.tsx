@@ -21,8 +21,10 @@ const MainBody:React.FC=()=> {
   const viewOptions = useAppSelector((state) => state.view.value);
   const dispatch = useAppDispatch()
   const [users, setUsers] = useState<object[]>([]);
+  const [clickedViewButton,setClickedButton]=useState("");
   const [pageNumber, setPageNumber] = useState(1);
   const usersPerPage = 9;
+  
 
   const lastUserIndex = pageNumber * usersPerPage;
   const firstUserIndex = lastUserIndex - usersPerPage;
@@ -36,10 +38,15 @@ const MainBody:React.FC=()=> {
       }
     );
   });
-
   function viewList(e:React.MouseEvent<HTMLImageElement, MouseEvent>){
-    dispatch(viewState())
-  console.log(e.currentTarget)
+   if(clickedViewButton!==e.currentTarget.id){
+    setClickedButton(e.currentTarget.id)
+    dispatch(viewState(true))
+   }
+else{
+  setClickedButton("")
+  dispatch(viewState(false))
+}
   }
 
   function updatePageNumber(page: number) {
@@ -111,7 +118,7 @@ const MainBody:React.FC=()=> {
                       <img src={dot} id={index.toString()} onClick={(e)=>{viewList(e)}} className="view-icon"/>
                     </td>
                  {
-                  viewOptions?   <div className="view-options">
+                  viewOptions && index.toString() === clickedViewButton?   <div className="view-options">
                   <div className="view-item">   <img src={view}/><a href="#">View Details</a></div>
                   <div className="view-item">
                        <img src={activate}/><p>Blacklist User</p>
