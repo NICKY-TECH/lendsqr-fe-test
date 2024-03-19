@@ -6,10 +6,8 @@ import { Outlet } from "react-router-dom";
 
 function Main(){
     const mobileMenuReduxValue = useAppSelector((state) => state.mobileMenu.value);
-    console.log("mobile")
-    console.log(mobileMenuReduxValue)
     return <>
-    <article className="dashboard">
+    <section className="dashboard">
    {mobileMenuReduxValue? <MobileMenu/>:""}
 <Header/>
 <section className="main-body">
@@ -17,6 +15,6 @@ function Main(){
 <Outlet/>
 </section>
 <MobileFooterBar/>
-    </article></>
+    </section></>
 }
 export default Main

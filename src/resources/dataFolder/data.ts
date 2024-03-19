@@ -267,11 +267,29 @@ const relationshipStatus = [{
 
 }];
 
+const subLinks =[
+  "General Details",
+  "Documents",
+  "Bank Details",
+  "Loans",
+  "Savings",
+  "App and Systems"
+]
+
+
+const personalDataOne =[
+  {
+    title:"FULL NAME",
+    text:""
+  }
+]
+
 export {
   cards,
   secondBarItems,
   lastBarItems,
   thirdBarItems,
+  subLinks,
   logout,
   tableData,
   topBarItems,

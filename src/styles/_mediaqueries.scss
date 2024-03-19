@@ -6,30 +6,37 @@ $extraLarge: 1280px;
 $extraextraLarge: 1536px;
 
 @media (max-width: $large) {
-  .mobile-menu{
+  .mobile-menu {
     border-right: 3px solid lighten($gray, 46);
-    background-color:lighten($gray, 46) ;
+    background-color: lighten($gray, 46);
     z-index: 5;
     position: fixed;
     display: flex;
     flex-direction: column;
-    padding-left:35px;
+    padding-left: 35px;
     max-height: 100%;
     min-height: 100vh;
     height: 100%;
     right: 0;
-    width:auto;
+    width: auto;
   }
-  .mobile-menu-content{
+  .section-four-details-page{
+    margin: 20px auto 60px auto;
+    max-width: 80%;
+    .content-section-four{
+      width: 100%;
+    }
+  }
+  .mobile-menu-content {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
     align-items: center;
-    .secondHalf-component-on-mobile-menu{
+    .secondHalf-component-on-mobile-menu {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap:10px;
+      gap: 10px;
       align-items: center;
     }
     .search {
@@ -37,7 +44,7 @@ $extraextraLarge: 1536px;
       align-items: center;
       border-radius: 0.5rem;
       border: 0.7px solid lighten($gray, 35);
-  
+
       width: 100%;
       input {
         width: 90%;
@@ -148,8 +155,8 @@ $extraextraLarge: 1536px;
     display: flex;
   }
   .close-button-container {
-    .close-button{
-      width:30px;
+    .close-button {
+      width: 30px;
     }
     justify-content: end;
     width: 100%;
@@ -210,10 +217,12 @@ $extraextraLarge: 1536px;
   }
 }
 
-
 @media (min-width: 1025px) {
-  .mobile-menu{
-   display: none;
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu-content {
+    display: none;
   }
   footer {
     display: flex;
@@ -263,12 +272,13 @@ $extraextraLarge: 1536px;
     display: none;
   }
 
-  .table-container {
+  .table-container,.section-four-details-page {
     max-width: 94%;
     margin: 20px 30px 30px 35px;
   }
+
   footer {
-    margin: 0 30px 300px 35px;
+    margin: 0 30px 30px 35px;
     max-width: 94%;
     justify-content: space-between;
     font-family: $work;
@@ -294,15 +304,16 @@ $extraextraLarge: 1536px;
     height: 100%;
     flex-grow: 1;
     z-index: 1;
+    padding:0 0 300px 0;
     .first-child {
-      margin-top: 60px;
+      margin-top: 45px;
       padding-top: 30px;
     }
     .first-child ul li {
       gap: 980px;
     }
   }
-  .ham{
+  .ham {
     display: none;
   }
   .logo-group {

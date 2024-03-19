@@ -18,16 +18,25 @@ import Button from './Components/Global/Button';
 import MobileMenu from './Components/Users/MobileMenu';
 import Main from './pages/Main';
 import Details from './pages/Details';
+import SubLinks from './Components/Users/SubLinks';
+import FieldTitle from './Components/Users/FieldTitle';
+import DetailsGroupSectionTwo from './Components/Users/DetailsGroupSectionTwo';
+import DetailsSectionTwoWrapper  from './Components/Users/DetailsSectionTwoWrapper';
+
 
 export {
  Input,
  Button,
   Selection,
   RegistrationForm,
+  DetailsSectionTwoWrapper,
+  SubLinks,
+  FieldTitle,
   Details,
   Main,
   MobileMenu,
   InputWrapper,
+  DetailsGroupSectionTwo,
   FilterIcon,
   MobileFooterBar,
   Paginate,

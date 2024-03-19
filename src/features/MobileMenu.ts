@@ -4,7 +4,7 @@ type initialStateType = {
 };
 
 const initialValue: initialStateType = {
-  value: true,
+  value: false,
 };
 
 export const mobileSlice = createSlice({

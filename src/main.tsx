@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import "./styles/base.css";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import filter from "./features/preferenceOverlay.ts";

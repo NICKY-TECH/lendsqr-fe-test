@@ -1,7 +1,6 @@
 import "../../styles/base.css";
 import {
   Card,
-  SideBar,
   Paginate,
   Selection,
   Input,
@@ -11,7 +10,6 @@ import {
 } from "../../index";
 import {
   cards,
-  tableData,
   relationshipStatus,
   organizationSelection,
 } from "../../resources/dataFolder/data";
@@ -90,19 +88,15 @@ if(localStorage.getItem("users")===undefined||localStorage.getItem("users")==nul
   function activateUser(index:number){
     users[index]={...users[index],icon:"Active"};
     localStorage.setItem("users",JSON.stringify(users));
-    console.log("index")
-    console.log(index);
-    console.log(users[index])
+    dispatch(viewState(false));
+ 
    
   }
 
   function blackListUser(index:number){
     users[index]={...users[index],icon:"Blacklisted"}
     localStorage.setItem("users",JSON.stringify(users));
-    console.log("index")
-    console.log(index);
-    console.log(users[index])
-   
+    dispatch(viewState(false));
   }
 
   function viewList(e: React.MouseEvent<HTMLImageElement, MouseEvent>) {
@@ -121,7 +115,7 @@ if(localStorage.getItem("users")===undefined||localStorage.getItem("users")==nul
   }
 
   return (
-    <section className="body">
+    <section>
       <article>
         <h1>Users</h1>
         <section className="cards-container">
@@ -280,7 +274,7 @@ if(localStorage.getItem("users")===undefined||localStorage.getItem("users")==nul
           <div className="first-half-footer">
             <p>Showing</p>
             <div className="data-shown">
-              <p>{pageNumber*usersPerPage}</p>
+              <p>{users.length!=0?pageNumber*usersPerPage:0}</p>
               <img src={dropDown} />
             </div>
             <p>out of {users.length}</p>
