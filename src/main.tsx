@@ -7,7 +7,7 @@ import filter from "./features/preferenceOverlay.ts";
 import view from "./features/viewOverlay.ts";
 import mobileMenu from "./features/MobileMenu.ts";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     filter,
     view,

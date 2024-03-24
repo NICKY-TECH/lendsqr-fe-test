@@ -6,7 +6,7 @@ function RegistrationForm() {
    <div className="login-inner-content">
    <h1>Welcome!</h1>
     <h2>Enter details to login.</h2>
-    <form>
+    <form data-testid="form">
       <Input {...{ placeholder: "Email" ,type:"email"}} />
       <Input {...{ placeholder: "Password",type:"password" }} />
       <a href="#">FORGOT PASSWORD</a>

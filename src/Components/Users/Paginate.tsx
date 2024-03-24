@@ -1,7 +1,7 @@
 import "../../styles/base.css";
 import prev from "../../resources/images/icons/prev-btn.png";
 import next from "../../resources/images/icons/next-btn.png";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 type func = (page: number) => void;
 
@@ -45,7 +45,7 @@ function nextBtn() {
   return (
     <div className="pagination-container">
       <div className="prev-btn-container">
-        <img src={prev}  onClick={prevBtn}/>
+        <img src={prev}  onClick={prevBtn} alt="previous"/>
       </div>
       <ul className="paginate">
         {pages.map((i, index) => {
@@ -60,6 +60,7 @@ function nextBtn() {
                 className={
                   props.currentPage === i ? "active-number" : "not-active"
                 }
+                data-testid={props.currentPage===i?"current":""}
               >
                 {i}
               </li>
@@ -71,7 +72,7 @@ function nextBtn() {
       </ul>
 
       <div className="next-btn-container">
-        <img src={next} onClick={nextBtn} />
+        <img src={next} onClick={nextBtn} alt="next"/>
       </div>
     </div>
   );

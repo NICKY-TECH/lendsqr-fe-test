@@ -5,11 +5,11 @@ import logo from "../resources/images/icons/Group (1).svg"
 function Login(){
     return <section className="login-container">
         <header>
-          <img src={logo}/>
+          <img src={logo} alt="logo"/>
         </header>
     <section className="login-section-two">
     <section className="login-image">
-<img src={LoginImage}/>
+<img src={LoginImage} alt="login-hero-image"/>
         </section>
         <RegistrationForm/>
     </section>
