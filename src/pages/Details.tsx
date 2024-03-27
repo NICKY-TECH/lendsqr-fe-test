@@ -4,7 +4,7 @@ import backButton from "../resources/images/icons/back.png";
 import fullStar from "../resources/images/icons/filled-star.png";
 import unFilled from "../resources/images/icons/unfilled-star.png";
 import user from "../resources/images/icons/global-avatar (1).png";
-import { Button, SubLinks, DetailsSectionTwoWrapper } from "..";
+import { Button, SubLinks, DetailsSectionTwoWrapper, DetailsGroupSectionTwo } from "..";
 
 function Details() {
   const id = useParams().id;
@@ -68,8 +68,8 @@ function Details() {
             <SubLinks />
           </div>
           <div className="part-two-content-section-four">
-            <DetailsSectionTwoWrapper
-              {...{
+           <table>
+            <DetailsGroupSectionTwo {...{
                 title: "Personal Information",
                 dataOne: [
                   { title: "FULL NAME", text: foundUser.email },
@@ -83,10 +83,8 @@ function Details() {
                   { title: "CHILDREN", text: "10" },
                   { title: "TYPE OF RESIDENCE", text: "Parent's Apartment" },
                 ],
-              }}
-            />
-            <DetailsSectionTwoWrapper
-              {...{
+              }}/>
+              <DetailsGroupSectionTwo  {...{
                 title: "Education and Employment",
                 dataOne: [
                   { title: "LEVEL OF EDUCATION", text: "B.Sc" },
@@ -97,23 +95,18 @@ function Details() {
                 dataTwo: [
                   { title: "OFFICE EMAIL", text: foundUser.name },
                   { title: "MONTHLY INCOME", text: "₦200,000.00- ₦400,000.00" },
-                  { title: "TYPE OF RESIDENCE", text: "Parent's Apartment" },
                   { title: "LOAN", text: "40,000" },
                 ],
-              }}
-            />
-            <DetailsSectionTwoWrapper
-              {...{
+              }}/>
+                      <DetailsGroupSectionTwo  {...{
                 title: "Socials",
                 dataOne: [
                   { title: "TWITTER", text: `@${name}_${secondName}` },
                   { title: "FACEBOOK", text: foundUser.email },
                   { title: "INSTAGRAM", text: `@${name}_${secondName}` },
                 ],
-              }}
-            />
-            <DetailsSectionTwoWrapper
-              {...{
+              }}/>
+                  <DetailsGroupSectionTwo  {...{
                 title: "Guarantor",
                 dataOne: [
                   { title: "FULL NAME", text: "Debby Ogana" },
@@ -121,10 +114,8 @@ function Details() {
                   { title: "EMAIL ADDRESS", text: "debby@gmail.com" },
                   { title: "RELATIONSHIP", text: "Sister" },
                 ],
-              }}
-            />
-             <DetailsSectionTwoWrapper
-              {...{
+              }}/>
+              <DetailsGroupSectionTwo  {...{
                 title: "",
                 dataOne: [
                   { title: "FULL NAME", text: "Debby Ogana" },
@@ -132,8 +123,9 @@ function Details() {
                   { title: "EMAIL ADDRESS", text: "debby@gmail.com" },
                   { title: "RELATIONSHIP", text: "Sister" },
                 ],
-              }}
-            />
+              }}/>
+           </table>
+
           </div>
         </section>
       </article>

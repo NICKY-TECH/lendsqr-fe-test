@@ -6,6 +6,9 @@ $extraLarge: 1280px;
 $extraextraLarge: 1536px;
 
 @media (max-width: $large) {
+  .part-two-content-section-four {
+    overflow-x: auto;
+  }
   .mobile-menu {
     border-right: 3px solid lighten($gray, 46);
     background-color: lighten($gray, 46);
@@ -193,6 +196,7 @@ $extraextraLarge: 1536px;
       width: 100%;
     }
   }
+
   .mobile-side-bar {
     grid-row: 12/12;
     display: flex;
